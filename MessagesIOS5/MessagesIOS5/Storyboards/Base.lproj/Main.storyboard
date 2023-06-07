@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Message Table View Controller-->
         <scene sceneID="2hz-Yj-Wov">
             <objects>
-                <tableViewController id="HYf-uI-NOf" sceneMemberID="viewController">
+                <tableViewController id="HYf-uI-NOf" customClass="MessageTableViewController" customModule="MessagesIOS5" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Yjy-DZ-L9o">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="100" id="Fkd-sv-eMq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="100" id="Fkd-sv-eMq" customClass="MessageTableViewCell" customModule="MessagesIOS5" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fkd-sv-eMq" id="PBK-aJ-iY9">
@@ -43,6 +43,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="moon.haze" catalog="system"/>
+                                            <connections>
+                                                <action selector="messageButtonTapped:" destination="Fkd-sv-eMq" eventType="touchUpInside" id="4va-St-gLQ"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
@@ -58,6 +61,11 @@
                                         <constraint firstItem="iwM-Hq-fr3" firstAttribute="trailing" secondItem="PBK-aJ-iY9" secondAttribute="trailingMargin" constant="14" id="ynt-l7-mrR"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageButton" destination="iwM-Hq-fr3" id="inL-aw-LnD"/>
+                                    <outlet property="messageSubtitleLabel" destination="f07-Gl-LFG" id="7Ey-ca-daJ"/>
+                                    <outlet property="messageTextLabel" destination="hIG-ip-gZS" id="esl-6s-ncN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

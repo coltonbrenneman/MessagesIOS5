@@ -14,6 +14,9 @@
 		441E1F122A30D6D6003A20D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F102A30D6D6003A20D9 /* LaunchScreen.storyboard */; };
 		441E1F1E2A30DA96003A20D9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F1D2A30DA96003A20D9 /* Message.swift */; };
 		441E1F202A30DD8D003A20D9 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F1F2A30DD8D003A20D9 /* MessageController.swift */; };
+		441E1F242A30E5C4003A20D9 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F232A30E5C4003A20D9 /* MessageTableViewCell.swift */; };
+		441E1F262A30E60A003A20D9 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F252A30E60A003A20D9 /* MessageTableViewController.swift */; };
+		441E1F282A30E8F6003A20D9 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F272A30E8F6003A20D9 /* DateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		441E1F132A30D6D6003A20D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		441E1F1D2A30DA96003A20D9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		441E1F1F2A30DD8D003A20D9 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		441E1F232A30E5C4003A20D9 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		441E1F252A30E60A003A20D9 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		441E1F272A30E8F6003A20D9 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 				441E1F132A30D6D6003A20D9 /* Info.plist */,
 				441E1F052A30D6D4003A20D9 /* AppDelegate.swift */,
 				441E1F072A30D6D4003A20D9 /* SceneDelegate.swift */,
+				441E1F272A30E8F6003A20D9 /* DateFormatter.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -89,7 +96,8 @@
 		441E1F1B2A30D9D5003A20D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				441E1F1F2A30DD8D003A20D9 /* MessageController.swift */,
+				441E1F222A30E58A003A20D9 /* ViewControllers */,
+				441E1F212A30E581003A20D9 /* ModelControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +108,23 @@
 				441E1F1D2A30DA96003A20D9 /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		441E1F212A30E581003A20D9 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F1F2A30DD8D003A20D9 /* MessageController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		441E1F222A30E58A003A20D9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F232A30E5C4003A20D9 /* MessageTableViewCell.swift */,
+				441E1F252A30E60A003A20D9 /* MessageTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +201,9 @@
 				441E1F1E2A30DA96003A20D9 /* Message.swift in Sources */,
 				441E1F062A30D6D4003A20D9 /* AppDelegate.swift in Sources */,
 				441E1F082A30D6D4003A20D9 /* SceneDelegate.swift in Sources */,
+				441E1F282A30E8F6003A20D9 /* DateFormatter.swift in Sources */,
+				441E1F242A30E5C4003A20D9 /* MessageTableViewCell.swift in Sources */,
+				441E1F262A30E60A003A20D9 /* MessageTableViewController.swift in Sources */,
 				441E1F202A30DD8D003A20D9 /* MessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
