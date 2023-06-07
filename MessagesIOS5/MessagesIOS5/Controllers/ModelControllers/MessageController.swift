@@ -13,6 +13,10 @@ class MessageController {
     static let sharedInstance = MessageController()
     var messages: [Message] = []
     
+    init() {
+        load()
+    }
+    
     // MARK: - CRUD Functions
     func createMessage(text: String) {
         let message = Message(text: text)

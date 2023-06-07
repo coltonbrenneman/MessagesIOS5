@@ -29,6 +29,7 @@ class MessageTableViewController: UITableViewController {
 
         let message = MessageController.sharedInstance.messages[indexPath.row]
         cell.updateUI(message: message)
+        cell.delegate = self
         
         return cell
     }
@@ -65,3 +66,13 @@ class MessageTableViewController: UITableViewController {
         // Thursday, the best day of the year
     }
 } //End of class
+
+// MARK: - Exntension
+extension MessageTableViewController: MessageTableViewCellDelegate {
+    func messageButtonTapped(cell: MessageTableViewCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else { return }
+        let message = MessageController.sharedInstance.messages[indexPath.row]
+        MessageController.sharedInstance.toggleIsRead(message: message)
+        cell.updateUI(message: message)
+    }
+} //End of extension
