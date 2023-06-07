@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Message {
+class Message: Codable {
     
     let text: String
-    let isRead: Bool
+    var isRead: Bool
     let timeStamp: Date
     let uuid: UUID
     
