@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		441E1F062A30D6D4003A20D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F052A30D6D4003A20D9 /* AppDelegate.swift */; };
 		441E1F082A30D6D4003A20D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F072A30D6D4003A20D9 /* SceneDelegate.swift */; };
-		441E1F0A2A30D6D4003A20D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F092A30D6D4003A20D9 /* ViewController.swift */; };
 		441E1F0D2A30D6D4003A20D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F0B2A30D6D4003A20D9 /* Main.storyboard */; };
 		441E1F0F2A30D6D6003A20D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F0E2A30D6D6003A20D9 /* Assets.xcassets */; };
 		441E1F122A30D6D6003A20D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 441E1F102A30D6D6003A20D9 /* LaunchScreen.storyboard */; };
+		441E1F1E2A30DA96003A20D9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F1D2A30DA96003A20D9 /* Message.swift */; };
+		441E1F202A30DD8D003A20D9 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441E1F1F2A30DD8D003A20D9 /* MessageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		441E1F022A30D6D4003A20D9 /* MessagesIOS5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagesIOS5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		441E1F052A30D6D4003A20D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		441E1F072A30D6D4003A20D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		441E1F092A30D6D4003A20D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		441E1F0C2A30D6D4003A20D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		441E1F0E2A30D6D6003A20D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		441E1F112A30D6D6003A20D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		441E1F132A30D6D6003A20D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		441E1F1D2A30DA96003A20D9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		441E1F1F2A30DD8D003A20D9 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		441E1F042A30D6D4003A20D9 /* MessagesIOS5 */ = {
 			isa = PBXGroup;
 			children = (
-				441E1F072A30D6D4003A20D9 /* SceneDelegate.swift */,
-				441E1F092A30D6D4003A20D9 /* ViewController.swift */,
-				441E1F0B2A30D6D4003A20D9 /* Main.storyboard */,
-				441E1F102A30D6D6003A20D9 /* LaunchScreen.storyboard */,
+				441E1F1C2A30D9E5003A20D9 /* Models */,
+				441E1F1B2A30D9D5003A20D9 /* Controllers */,
+				441E1F1A2A30D897003A20D9 /* Storyboards */,
+				441E1F192A30D87A003A20D9 /* SupportingFiles */,
+			);
+			path = MessagesIOS5;
+			sourceTree = "<group>";
+		};
+		441E1F192A30D87A003A20D9 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				441E1F0E2A30D6D6003A20D9 /* Assets.xcassets */,
 				441E1F132A30D6D6003A20D9 /* Info.plist */,
 				441E1F052A30D6D4003A20D9 /* AppDelegate.swift */,
+				441E1F072A30D6D4003A20D9 /* SceneDelegate.swift */,
 			);
-			path = MessagesIOS5;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		441E1F1A2A30D897003A20D9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F0B2A30D6D4003A20D9 /* Main.storyboard */,
+				441E1F102A30D6D6003A20D9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		441E1F1B2A30D9D5003A20D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F1F2A30DD8D003A20D9 /* MessageController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		441E1F1C2A30D9E5003A20D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				441E1F1D2A30DA96003A20D9 /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				441E1F0A2A30D6D4003A20D9 /* ViewController.swift in Sources */,
+				441E1F1E2A30DA96003A20D9 /* Message.swift in Sources */,
 				441E1F062A30D6D4003A20D9 /* AppDelegate.swift in Sources */,
 				441E1F082A30D6D4003A20D9 /* SceneDelegate.swift in Sources */,
+				441E1F202A30DD8D003A20D9 /* MessageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +324,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MessagesIOS5/Info.plist;
+				INFOPLIST_FILE = MessagesIOS5/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MessagesIOS5/Info.plist;
+				INFOPLIST_FILE = MessagesIOS5/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
