@@ -1,12 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2VU-eg-vmQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fHu-Ym-kCy">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pdQ-hR-qFy">
+            <objects>
+                <tabBarController id="fHu-Ym-kCy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ILf-eb-ub9"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1fd-aZ-Ud3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2VU-eg-vmQ" kind="relationship" relationship="viewControllers" id="ou2-p3-lJy"/>
+                        <segue destination="lVI-I5-xCi" kind="relationship" relationship="viewControllers" id="B0p-0P-gst"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxR-mU-1MF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-934" y="236"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="kRO-Bv-qhP">
+            <objects>
+                <viewController id="lVI-I5-xCi" customClass="MarkAllViewController" customModule="MessagesIOS5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hx9-hs-RXC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="uPu-ee-NKc">
+                                <rect key="frame" x="39.333333333333343" y="350" width="314.33333333333326" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTa-Hs-A6q">
+                                        <rect key="frame" x="0.0" y="0.0" width="314.33333333333331" height="46.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Mark All As Read">
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="markAllAsReadButtonTapped:" destination="lVI-I5-xCi" eventType="touchUpInside" id="hPp-Z5-rwY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVO-Pv-GwQ">
+                                        <rect key="frame" x="0.0" y="81.666666666666686" width="314.33333333333331" height="46.333333333333343"/>
+                                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Mark All As Unread"/>
+                                        <connections>
+                                            <action selector="markAllAsUnreadButtonTapped:" destination="lVI-I5-xCi" eventType="touchUpInside" id="nJS-gZ-LnX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8UN-ml-3Mq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uPu-ee-NKc" firstAttribute="centerX" secondItem="8UN-ml-3Mq" secondAttribute="centerX" id="1cO-Qp-8Eo"/>
+                            <constraint firstItem="uPu-ee-NKc" firstAttribute="height" secondItem="Hx9-hs-RXC" secondAttribute="height" multiplier="0.15" id="Oxf-RB-DAV"/>
+                            <constraint firstItem="uPu-ee-NKc" firstAttribute="width" secondItem="Hx9-hs-RXC" secondAttribute="width" multiplier="0.8" id="UNq-fv-OY9"/>
+                            <constraint firstItem="uPu-ee-NKc" firstAttribute="centerY" secondItem="8UN-ml-3Mq" secondAttribute="centerY" id="dbO-dK-Bux"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="flame" catalog="system" id="ZPc-Kv-51n"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cor-To-ObX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="550.70422535211276"/>
+        </scene>
         <!--Message Table View Controller-->
         <scene sceneID="2hz-Yj-Wov">
             <objects>
@@ -85,10 +154,11 @@
             </objects>
             <point key="canvasLocation" x="779.38931297709917" y="-120.42253521126761"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Test-->
         <scene sceneID="MfO-i7-x7C">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2VU-eg-vmQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Test" image="moon.haze.fill" catalog="system" id="F10-T4-xwP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xj6-Ou-cTf">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -96,7 +166,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HYf-uI-NOf" kind="relationship" relationship="rootViewController" id="ffJ-74-k2J"/>
+                        <segue destination="HYf-uI-NOf" kind="relationship" relationship="rootViewController" id="bEI-Bk-AGo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pJ-41-viO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -105,12 +175,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flame" catalog="system" width="106" height="128"/>
         <image name="moon.haze" catalog="system" width="128" height="113"/>
+        <image name="moon.haze.fill" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

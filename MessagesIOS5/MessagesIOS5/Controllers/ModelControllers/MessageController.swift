@@ -17,7 +17,7 @@ class MessageController {
         load()
     }
     
-    // MARK: - CRUD Functions
+    // MARK: - Functions
     func createMessage(text: String) {
         let message = Message(text: text)
         messages.append(message)
@@ -32,6 +32,16 @@ class MessageController {
     
     func toggleIsRead(message: Message) {
         message.isRead.toggle()
+        save()
+    }
+    
+    func markAllAsRead() {
+        messages.forEach { $0.isRead = true }
+        save()
+    }
+    
+    func markAllAsUnread() {
+        messages.forEach { $0.isRead = false }
         save()
     }
     

@@ -12,6 +12,8 @@ class MessageTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       setUpNotifications()
     }
 
     // MARK: - Actions
@@ -43,6 +45,21 @@ class MessageTableViewController: UITableViewController {
     }
     
     // MARK: - Function
+    func setUpNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(markAllAsRead), name: Constants.Notifications.markAllAsRead, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(markAllAsUnread), name: Constants.Notifications.markAllAsUnread, object: nil)
+    }
+    
+    @objc func markAllAsRead() {
+        MessageController.sharedInstance.markAllAsRead()
+        tableView.reloadData()
+    }
+    
+    @objc func markAllAsUnread() {
+        MessageController.sharedInstance.markAllAsUnread()
+        tableView.reloadData()
+    }
+    
     func presentNewMessageAlert() {
         let alert = UIAlertController(title: "New Message", message: "Type your message below hoe", preferredStyle: .alert)
         alert.addTextField { textField in
@@ -59,11 +76,6 @@ class MessageTableViewController: UITableViewController {
         alert.addAction(dismissAction)
         alert.addAction(confirmAction)
         present(alert, animated: true)
-    }
-    
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Thursday, the best day of the year
     }
 } //End of class
 
